@@ -1,5 +1,4 @@
 import React, { Component } from "react";
-import Link from "next/link";
 import BaseLayout from "../components/layouts/BaseLayout";
 import { withRouter } from "next/router";
 import axios from "axios";
@@ -7,7 +6,7 @@ import axios from "axios";
 class Portfolio extends Component {
   static async getInitialProps({ query }) {
     try {
-      const postId = query.title;
+      const postId = query.id;
       const res = await axios.get(
         `https://jsonplaceholder.typicode.com/posts/${postId}`
       );
