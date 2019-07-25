@@ -1,9 +1,17 @@
+import React from "react";
 import BaseLayout from "../components/layouts/BaseLayout";
+import BasePage from "../components/layouts/BasePage";
 
-export default function About() {
-  return (
-    <BaseLayout>
-      <p>This is the about page</p>
-    </BaseLayout>
-  );
+class About extends React.Component {
+  render() {
+    return (
+      <BaseLayout {...this.props.auth}>
+        <BasePage className="about-page">
+          <p>This is the about page</p>
+        </BasePage>
+      </BaseLayout>
+    );
+  }
 }
+
+export default About;

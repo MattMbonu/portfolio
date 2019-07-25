@@ -1,0 +1,49 @@
+// HEADER
+.port-navbar.port-default {
+  width: 100%;
+  z-index: 15;
+  padding: 40px;
+  display: flex;
+  justify-content: space-between;
+
+  .nav {
+    &__list {
+      display: flex;
+    }
+  }
+
+  .port-navbar {
+    display: flex;
+    &-brand {
+      color: white;
+      font-size: 24px;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      font-weight: bold;
+    }
+
+    &-item {
+      list-style: none;
+      margin-left: 10px;
+      margin-right: 10px;
+    }
+
+    &-link {
+      color: white;
+      font-weight: bold;
+      letter-spacing: 0.8px;
+      font-size: 18px;
+      text-transform: uppercase;
+      text-decoration: none;
+
+      &.active {
+        color: #dba919;
+      }
+
+      &:hover,
+      &:focus {
+        color: #dba919;
+      }
+    }
+  }
+}

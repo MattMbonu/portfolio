@@ -1,0 +1,15 @@
+Three ways to layout websites
+1. Float Layouts => tried and true
+2. Flexbox => amazing for small Layouts
+3. CSS Grid => great for full websites
+
+What is a grid?
+A grid is a design system that allows us to build a consistent interface.
+All columns in a line should be in one row.
+Standard max width for grids is 1140px converted to rem thats 114 rem units
+for grids for whatever hor. gutter you want you always use margin right. And you float left
+
+What is a Utility Class?
+a simple class that has one job or a very small simple task very simple classes
+
+**inline-block elements can be centered with text align center

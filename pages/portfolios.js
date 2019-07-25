@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import axios from "axios";
 import BaseLayout from "../components/layouts/BaseLayout";
+import BasePage from "../components/layouts/BasePage";
 import { Link } from "../routes";
 
 export default class Portfolios extends Component {
@@ -15,16 +16,18 @@ export default class Portfolios extends Component {
   }
   render() {
     return (
-      <BaseLayout>
-        <ul>
-          {this.props.posts.map(post => (
-            <li key={post.id}>
-              <Link route={`/portfolio/${post.id}`}>
-                <a>{post.title}</a>
-              </Link>
-            </li>
-          ))}
-        </ul>
+      <BaseLayout {...this.props.auth}>
+        <BasePage>
+          <ul>
+            {this.props.posts.map(post => (
+              <li key={post.id}>
+                <Link route={`/portfolio/${post.id}`}>
+                  <a>{post.title}</a>
+                </Link>
+              </li>
+            ))}
+          </ul>
+        </BasePage>
       </BaseLayout>
     );
   }
