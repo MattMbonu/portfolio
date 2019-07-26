@@ -3,9 +3,9 @@
 }
 
 .main-section {
-  top: 150px;
   width: 100%;
-  padding: 150px 0 0;
+  padding: 15rem 0 0;
+  background-image: url(/static/images/background-index.png);
 }
 
 .hero-section {
@@ -60,33 +60,20 @@
   }
 }
 
-.hero-welcome-wrapper {
-  justify-content: flex-end;
-}
-
-@media screen and (max-width: 991px) {
-  .main-section {
-    display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
-  }
-  .hero-section {
-    width: 341px;
-
-    &-content {
-      width: 341px;
-    }
-  }
-
-  .hero-welcome-text > h1 {
-    margin-top: 0px;
-  }
-}
-
 .background-image {
   position: absolute;
-  width: 1762px;
-  height: 493px;
+  padding-left: 17rem;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 60vw;
+  height: 50rem;
+  opacity: 0.5;
+  &__image {
+    display: inline-block;
+    height: 100%;
+    width: 100%;
+  }
 }
 
 .shadow-custom {

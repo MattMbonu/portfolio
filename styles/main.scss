@@ -9,7 +9,13 @@
 @import "./base/utils";
 
 @import "./components/cards";
+@import "./components/btn";
 
 @import "./layout/header";
 @import "./layout/grid";
+@import "./layout/navigation";
+
 @import "./pages/home";
+@import "./pages/base-page";
+@import "./pages/portfolios";
+@import "./pages/about";

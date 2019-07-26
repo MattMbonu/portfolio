@@ -8,33 +8,11 @@ const handle = routes.getRequestHandler(app);
 //SERVICE
 const authService = require("./services/auth");
 
-const secretData = [
-  {
-    title: "secret-data 1",
-    desc: "plans to build spaceship"
-  },
-  {
-    title: "secret-data 2",
-    desc: "my secret data"
-  }
-];
-
 app
   .prepare()
   .then(() => {
     const server = express();
 
-    server.get("/api/v1/secret", authService.checkJWT, (req, res) => {
-      return res.json(secretData);
-    });
-
-    server.get(
-      "/api/v1/onlysiteowner",
-      [authService.checkJWT, authService.checkRole("siteOwner")],
-      (req, res) => {
-        return res.json(secretData);
-      }
-    );
     server.get("*", (req, res) => {
       return handle(req, res);
     });
@@ -46,10 +24,10 @@ app
           .send({ title: "Unauthorized", detail: "Unauthorized Access" });
       }
     });
-
-    server.use(handle).listen(3000, err => {
+    const PORT = process.env.PORT || 3000;
+    server.use(handle).listen(PORT, err => {
       if (err) throw err;
-      console.log("> Ready on http://localhost:3000");
+      console.log(`> Ready on ${PORT}`);
     });
   })
   .catch(ex => {
