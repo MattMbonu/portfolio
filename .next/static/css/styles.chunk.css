@@ -182,14 +182,14 @@ body {
     border-top-left-radius: 3px;
     border-top-right-radius: 3px; }
     .card__picture--1 {
-      background-image: linear-gradient(to right bottom, #ffb900, #ff7730); }
+      background-image: linear-gradient(to right bottom, #ffb900, #ff7730), url(/static/images/crwn-clothing.jpg); }
     .card__picture--2 {
-      background-image: linear-gradient(to right bottom, #7ed56f, #28b485); }
+      background-image: linear-gradient(to right bottom, #7ed56f, #28b485), url(/static/images/dev-connector2.jpg); }
     .card__picture--3 {
-      background-image: linear-gradient(to right bottom, #2998ff, #5643fa); }
+      background-image: linear-gradient(to right bottom, #2998ff, #5643fa), url(/static/images/happy-wallet.jpg); }
   .card__heading {
     font-size: 2.8rem;
-    font-weight: 300;
+    font-weight: 500;
     text-transform: uppercase;
     text-align: right;
     color: #fff;
@@ -198,7 +198,7 @@ body {
     right: 2rem;
     width: 75%; }
   .card__heading-span {
-    padding: 1rem 1.5rem;
+    padding: 0.65rem 1.5rem;
     -webkit-box-decoration-break: clone;
     box-decoration-break: clone; }
     .card__heading-span--1 {
@@ -301,6 +301,12 @@ body {
   font-size: 2rem;
   font-weight: 550; }
 
+.btn--grey {
+  background-color: #999;
+  color: #fff;
+  font-size: 2rem;
+  font-weight: 550; }
+
 .btn--green {
   background: #55c57a;
   color: #fff; }
@@ -321,6 +327,9 @@ body {
 
 .btn--white::after {
   background-color: #fff; }
+
+.btn--grey::after {
+  background-color: #999; }
 
 .btn-text:link, .btn-text:visited {
   font-size: 1.6rem;

@@ -41,6 +41,12 @@
     font-size: 2rem;
     font-weight: 550;
   }
+  &--grey {
+    background-color: $color-grey-dark-2;
+    color: $color-white;
+    font-size: 2rem;
+    font-weight: 550;
+  }
   &--green {
     background: $color-primary;
     color: $color-white;
@@ -62,6 +68,9 @@
   }
   &--white::after {
     background-color: $color-white;
+  }
+  &--grey::after {
+    background-color: $color-grey-dark-2;
   }
 }
 

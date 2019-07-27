@@ -1,5 +1,4 @@
 .card {
-  // FUNCTIONALITY
   perspective: 150rem;
   -moz-perspective: 150rem;
   position: relative;
@@ -71,32 +70,35 @@
 
     &--1 {
       background-image: linear-gradient(
-        to right bottom,
-        $color-secondary-light,
-        $color-secondary
-      );
+          to right bottom,
+          $color-secondary-light,
+          $color-secondary
+        ),
+        url(/static/images/crwn-clothing.jpg);
     }
 
     &--2 {
       background-image: linear-gradient(
-        to right bottom,
-        $color-primary-light,
-        $color-primary-dark
-      );
+          to right bottom,
+          $color-primary-light,
+          $color-primary-dark
+        ),
+        url(/static/images/dev-connector2.jpg);
     }
 
     &--3 {
       background-image: linear-gradient(
-        to right bottom,
-        $color-tertiary-light,
-        $color-tertiary
-      );
+          to right bottom,
+          $color-tertiary-light,
+          $color-tertiary
+        ),
+        url(/static/images/happy-wallet.jpg);
     }
   }
 
   &__heading {
     font-size: 2.8rem;
-    font-weight: 300;
+    font-weight: 500;
     text-transform: uppercase;
     text-align: right;
     color: $color-white;
@@ -107,7 +109,7 @@
   }
 
   &__heading-span {
-    padding: 1rem 1.5rem;
+    padding: 0.65rem 1.5rem;
     -webkit-box-decoration-break: clone;
     box-decoration-break: clone;
 
