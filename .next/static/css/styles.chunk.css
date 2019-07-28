@@ -97,8 +97,7 @@ body {
   @media (max-width: 37.5em) {
     .self-typed {
       display: flex;
-      justify-content: center;
-      text-align: center; } }
+      justify-content: center; } }
 
 .u-center-text {
   text-align: center !important; }

@@ -17,6 +17,5 @@ body {
   @include respond(phone) {
     display: flex;
     justify-content: center;
-    text-align: center;
   }
 }

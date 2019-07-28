@@ -74,6 +74,13 @@ class About extends React.Component {
                         </span>
                       </a>
                     </li>
+                    <li className="icons__list-item">
+                      <a href="mailto:mcmbonu1@gmail.com">
+                        <span className="icons__item">
+                          <i class="fas fa-envelope" />
+                        </span>
+                      </a>
+                    </li>
                   </ul>
                 </div>
                 <h4>Like What You're Hearing? Want To Get In Touch? </h4>
