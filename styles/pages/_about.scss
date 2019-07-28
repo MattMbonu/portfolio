@@ -26,23 +26,23 @@
 
   .title {
     @include animation-detail(0.7s);
-    font-size: 42px;
+    font-size: 4.2rem;
     font-weight: bold;
   }
 
   .subtitle {
     @include animation-detail(2.2s);
-    font-size: 33px;
+    font-size: 3.3rem;
   }
 
   .subsubTitle {
     @include animation-detail(3.6s);
-    font-size: 18px;
+    font-size: 1.8rem;
   }
 
   .other-title {
     @include animation-detail(4.6s);
-    font-size: 42px;
+    font-size: 4.2rem;
     font-weight: bold;
     margin-bottom: 15rem;
   }

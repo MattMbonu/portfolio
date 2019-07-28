@@ -11,17 +11,13 @@ export default class Portfolios extends Component {
   render() {
     return (
       <BaseLayout title="Matthew Mbonu - Projects" {...this.props.auth}>
-        <BasePage className="portfolios-page" title="Personal Projects">
+        <BasePage title="A Few Personal Projects">
           <div className="row-container u-margin-top-med">
             {this.state.portfolios.map((portfolio, index) => {
               return <Card {...portfolio} key={index} index={index} />;
             })}
           </div>
-          {/* <div className="row-container">
-            {this.state.portfolios.map((portfolio, index) => {
-              return <Card {...portfolio} key={index} index={index} />;
-            })}
-          </div> */}
+          {/* this is just a start further projects wil be added shortyly and map will be adjusted */}
         </BasePage>
       </BaseLayout>
     );

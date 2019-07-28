@@ -1,9 +1,9 @@
-import React, { Fragment } from "react";
+import React from "react";
 import Header from "../shared/Header";
 import Head from "next/head";
 
 const BaseLayout = props => {
-  const { className, children, isAuthenticated, title } = props;
+  const { className, children, title } = props;
   const headerType = props.headerType || "default";
   return (
     <div className="layout-container">
@@ -44,10 +44,7 @@ const BaseLayout = props => {
         />
         <meta name="viewport" content="initial-scale=1.0, width=device-width" />
       </Head>
-      <Header
-        className={`port-nav-${headerType}`}
-        isAuthenticated={isAuthenticated}
-      />
+      <Header className={`port-nav-${headerType}`} />
       <main className={`cover ${className}`}>
         <div className="wrapper">{children}</div>
       </main>

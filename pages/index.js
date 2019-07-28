@@ -10,7 +10,6 @@ export default class Index extends Component {
         className="cover"
         title="Matthew Mbonu - Portfolio"
         headerType="index"
-        {...this.props.auth}
       >
         <section className="main-section">
           <div className="row-container">
@@ -52,6 +51,7 @@ export default class Index extends Component {
                     "Team Player!",
                     "Javascript",
                     "React js",
+                    "Python",
                     "Node js",
                     "Express",
                     "Dart",
@@ -68,8 +68,13 @@ export default class Index extends Component {
                 <div className="hero-welcome-bio">
                   <h1>Let's take a look at my work.</h1>
                   <Link route="/portfolios">
-                    <a className="btn btn--white btn--animated u-margin-top-med u-margin-bottom-large">
-                      Check Out some Projects
+                    <a className="btn btn--white btn--animated u-margin-top-med u-margin-bottom-small">
+                      Check Out Some Projects
+                    </a>
+                  </Link>
+                  <Link route="/about">
+                    <a className="btn btn--grey btn--animated u-margin-bottom-large">
+                      Find Out More About Me
                     </a>
                   </Link>
                 </div>

@@ -2,7 +2,7 @@
 .port-navbar.port-nav-base {
   width: 100vw;
   z-index: 15;
-  padding: 40px;
+  padding: 4rem;
   display: flex;
   justify-content: space-between;
 
@@ -20,7 +20,7 @@
 
 // --------- DEFAULT HEADER -------------
 .port-navbar.port-nav-base.port-nav-default {
-  padding: 30px;
+  padding: 3rem;
   background-color: $secondary !important;
 }
 

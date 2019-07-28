@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import BasePage from "../components/layouts/BasePage";
 import BaseLayout from "../components/layouts/BaseLayout";
+import { Link } from "../routes";
 
 class About extends React.Component {
   render() {
@@ -33,22 +34,28 @@ class About extends React.Component {
                 </h2>
                 <p className="u-margin-bottom-small">
                   My name is Matthew Mbonu and I'm a web developer from Atlanta,
-                  GA.{" "}
+                  GA 💪{" "}
                 </p>
 
                 <p className="u-margin-bottom-small">
-                  I enjoy turning complex problems into simple, beautiful and
+                  I love turning complex problems into simple, beautiful and
                   intuitive designs. When I'm not coding, tweeting or pushing
                   pixels, you'll find me cooking, gardening or travelling all
                   over the world! I enjoy working on teams and building
-                  meaningful things from scratch. As a web developer, I enjoy
-                  using my obsessive attention to detail, my unequivocal love
-                  for making things, and my mission-driven work ethic to
-                  literally change the world. That's why I’m excited to make a
-                  big impact at a high growth company!
+                  meaningful things from scratch. As a web developer, I also
+                  enjoy using my obsessive attention to detail, my unequivocal
+                  love for making things, and my mission-driven work ethic to
+                  produce the highest quality experience for users. That's why
+                  I’m excited to make a big impact at a high growth company!
+                </p>
+                <p>
+                  I'm a big fan of React for frontend development and Node for
+                  backend but I also love coding in Python, Dart (with Flutter),
+                  jQuery, vanilla Javascript, and some React frameworks like
+                  Nextjs for SSR (i.e. this website) and Meteor{" "}
                 </p>
 
-                <div>
+                <div className="u-margin-bottom-med">
                   <ul className="icons">
                     <li className="icons__list-item">
                       <a
@@ -69,6 +76,12 @@ class About extends React.Component {
                     </li>
                   </ul>
                 </div>
+                <h4>Like What You're Hearing? Want To Get In Touch? </h4>
+                <Link route="/contact">
+                  <a className="btn btn--green btn--animated u-margin-top-med u-margin-bottom-large">
+                    Contact Me!
+                  </a>
+                </Link>
               </div>
             </div>
           </section>
