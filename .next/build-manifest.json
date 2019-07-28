@@ -13,11 +13,11 @@
       "static/runtime/webpack.js",
       "static/runtime/main.js"
     ],
-    "/index": [
+    "/thanks": [
       "static/runtime/webpack.js",
       "static/runtime/main.js"
     ],
-    "/portfolios": [
+    "/index": [
       "static/runtime/webpack.js",
       "static/runtime/main.js"
     ],

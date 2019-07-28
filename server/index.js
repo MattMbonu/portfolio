@@ -21,10 +21,13 @@ app
       const message = req.body.message;
       const to = "mcmbonu1@yahoo.com";
       const smtpTransport = nodemailer.createTransport({
+        host: "smtp.mail.yahoo.com",
+        port: 465,
         service: "yahoo",
+        secure: false,
         auth: {
           user: "mcmbonu1@yahoo.com",
-          pass: process.env.PASSWORD
+          pass: "dmjjmd123"
         }
       });
       const mailOptions = {
