@@ -270,14 +270,15 @@ body {
   text-decoration: none;
   padding: 1.5rem 4rem;
   display: inline-block;
-  /* any high number will round edges */
   border-radius: 10rem;
-  /* transition property must be on inital state */
   transition: all 0.2s;
   position: relative;
   font-size: 1.6rem;
-  border: none;
+  \border: none;
   cursor: pointer; }
+  @media (max-width: 56.25em) {
+    .btn, .btn:link, .btn:visited {
+      padding: 2.5rem 6rem; } }
 
 .btn-animated {
   animation: moveInButton 0.5s ease-out 0.75s;
@@ -349,6 +350,85 @@ body {
 .btn-text:active {
   box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
   transform: translateY(0); }
+
+.form {
+  color: #2c3e50; }
+  .form__group:not(:last-child) {
+    margin-bottom: 2rem; }
+  .form__input {
+    font-size: 1.5rem;
+    font-family: inherit;
+    color: inherit;
+    padding: 1.5rem 2rem;
+    border-radius: 2px;
+    background-color: rgba(255, 255, 255, 0.5);
+    border: none;
+    border-bottom: 3px solid transparent;
+    width: 90%;
+    display: block;
+    transition: all 0.3s; }
+    @media (max-width: 56.25em) {
+      .form__input {
+        width: 100%; } }
+    .form__input:focus {
+      outline: none;
+      box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.1);
+      border-bottom: 3px solid #55c57a; }
+    .form__input:focus:invalid {
+      border-bottom: 3px solid #ff7730; }
+    .form__input::-webkit-input-placeholder {
+      color: #999; }
+  .form__label {
+    font-size: 1.2rem;
+    font-weight: 700;
+    margin-left: 2rem;
+    margin-top: 0.7rem;
+    display: block;
+    transition: all 0.3s; }
+  .form__input:placeholder-shown + .form__label {
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(-4rem); }
+  .form__radio-group {
+    width: 49%;
+    display: flex;
+    flex-direction: column; }
+    @media (max-width: 56.25em) {
+      .form__radio-group {
+        width: 100%;
+        margin-bottom: 2rem; } }
+  .form__radio-input {
+    display: none; }
+  .form__radio-label {
+    font-size: 1.6rem;
+    cursor: pointer;
+    position: relative;
+    padding-left: 4.5rem;
+    margin-bottom: 2rem; }
+  .form__radio-button {
+    height: 3rem;
+    width: 3rem;
+    border: 5px solid #55c57a;
+    border-radius: 50%;
+    display: inline-block;
+    position: absolute;
+    left: 0;
+    top: -0.4rem; }
+    .form__radio-button::after {
+      content: "";
+      display: block;
+      height: 1.3rem;
+      width: 1.3rem;
+      border-radius: 50%;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      background-color: #55c57a;
+      opacity: 0;
+      transition: opacity 0.2s; }
+  .form__radio-input:checked ~ .form__radio-label .form__radio-button::after {
+    opacity: 1; }
 
 .port-navbar.port-nav-base {
   width: 100vw;
@@ -655,10 +735,20 @@ body {
       text-transform: uppercase;
       margin-bottom: 50px; }
 
-.about-page .left-side {
-  margin-top: 10vh;
+.about-page .left-side,
+.about-page .right-side {
+  margin-top: 5vh;
   color: black;
   text-align: left; }
+
+.about-page .icons {
+  display: flex;
+  justify-content: left;
+  list-style: none;
+  font-size: 3rem; }
+  .about-page .icons__list-item {
+    margin-top: 4rem;
+    margin-left: 3rem; }
 
 .about-page .fadein {
   opacity: 0;
@@ -695,11 +785,48 @@ body {
   animation-delay: 3.6s;
   font-size: 18px; }
 
+.about-page .other-title {
+  -webkit-animation-delay: 4.6s;
+  -moz-animation-delay: 4.6s;
+  animation-delay: 4.6s;
+  font-size: 42px;
+  font-weight: bold;
+  margin-bottom: 15rem; }
+
 @keyframes fadein {
   from {
     opacity: 0; }
   to {
     opacity: 1; } }
+
+.section-book {
+  padding: 15rem 0;
+  background-image: linear-gradient(to right bottom, #00aeef 0%, #7ed56f 60%, #55c57a 100%); }
+  @media (max-width: 56.25em) {
+    .section-book {
+      padding: 10rem 0; } }
+
+.book {
+  background-image: linear-gradient(105deg, rgba(255, 255, 255, 0.9) 0%, rgba(255, 255, 255, 0.9) 50%, transparent 50%), url(/static/images/contact.jpg);
+  background-size: 100%;
+  border-radius: 3px;
+  box-shadow: 0 3rem 5rem rgba(0, 0, 0, 0.2); }
+  @media (max-width: 75em) {
+    .book {
+      background-image: linear-gradient(105deg, rgba(255, 255, 255, 0.9) 0%, rgba(255, 255, 255, 0.9) 65%, transparent 65%);
+      background-size: cover; } }
+  @media (max-width: 56.25em) {
+    .book {
+      background-image: linear-gradient(to right, rgba(255, 255, 255, 0.9) 0%, rgba(255, 255, 255, 0.9) 100%); } }
+  .book__form {
+    width: 50%;
+    padding: 6rem; }
+    @media (max-width: 75em) {
+      .book__form {
+        width: 65%; } }
+    @media (max-width: 56.25em) {
+      .book__form {
+        width: 100%; } }
 
 
 /*# sourceMappingURL=styles.chunk.css.map*/

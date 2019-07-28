@@ -19,10 +19,9 @@ const BaseLayout = props => {
         />
         <meta
           property="og:title"
-          content="Filip Jerga - programmer, developer, bloger"
+          content="Matthew Mbonu - programmer, developer, bloger"
         />
         <meta property="og:locale" content="en_US" />
-        <meta property="og:url" content={`${process.env.BASE_URL}`} />
         <meta property="og:type" content="website" />
         <meta
           property="og:description"
@@ -31,6 +30,12 @@ const BaseLayout = props => {
         <link
           href="https://fonts.googleapis.com/css?family=Montserrat:400,700"
           rel="stylesheet"
+        />
+        <link
+          rel="stylesheet"
+          href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
+          integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf"
+          crossorigin="anonymous"
         />
         <link
           rel="icon"

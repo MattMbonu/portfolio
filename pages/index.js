@@ -36,9 +36,10 @@ export default class Index extends Component {
               <div className="hero-welcome-wrapper">
                 <div className="hero-welcome-text">
                   <h1>
-                    Hi my name is Matthew Mbonu and I build web interfaces.
-                    Welcome to my Site! get informed, collaborate, and discover
-                    projects I have been working on!
+                    Hi my name is Matthew Mbonu and I enjoy building beautiful
+                    user interfaces from scratch. Welcome to my Site! get
+                    informed, collaborate, and discover projects I have been
+                    working on!
                   </h1>
                 </div>
                 <Typed
@@ -67,7 +68,7 @@ export default class Index extends Component {
                 <div className="hero-welcome-bio">
                   <h1>Let's take a look at my work.</h1>
                   <Link route="/portfolios">
-                    <a className="btn btn--white btn--animated u-margin-top-med">
+                    <a className="btn btn--white btn--animated u-margin-top-med u-margin-bottom-large">
                       Check Out some Projects
                     </a>
                   </Link>

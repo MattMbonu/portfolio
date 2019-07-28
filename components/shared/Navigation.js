@@ -33,6 +33,9 @@ const Navigation = () => {
           <li className="navigation__item">
             <BsNavLink path="/about" title="About Me" />
           </li>
+          <li className="navigation__item">
+            <BsNavLink path="/contact" title="Contact" />
+          </li>
         </ul>
       </nav>
     </div>

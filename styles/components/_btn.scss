@@ -6,15 +6,16 @@
     text-decoration: none;
     padding: 1.5rem 4rem;
     display: inline-block;
-    /* any high number will round edges */
+    @include respond(tab-port) {
+      padding: 2.5rem 6rem;
+    }
     border-radius: 10rem;
-    /* transition property must be on inital state */
+
     transition: all 0.2s;
     position: relative;
     font-size: $default-font-s;
 
-    //change for buttons
-    border: none;
+    \border: none;
     cursor: pointer;
   }
   &-animated {
