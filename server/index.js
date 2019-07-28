@@ -19,11 +19,11 @@ app
       const name = req.body.name;
       const from = req.body.email;
       const message = req.body.message;
-      const to = "mcmbonu1@gmail.com";
+      const to = "mcmbonu1@yahoo.com";
       const smtpTransport = nodemailer.createTransport({
-        service: "Gmail",
+        service: "yahoo",
         auth: {
-          user: "mcmbonu1@gmail.com",
+          user: "mcmbonu1@yahoo.com",
           pass: process.env.PASSWORD
         }
       });
