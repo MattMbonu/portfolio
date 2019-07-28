@@ -65,18 +65,22 @@ export default class Index extends Component {
                   cursorChar="|"
                   className="self-typed"
                 />
-                <div className="hero-welcome-bio">
-                  <h1>Let's take a look at my work.</h1>
-                  <Link route="/portfolios">
-                    <a className="btn btn--white btn--animated u-margin-top-med u-margin-bottom-small">
-                      Check Out Some Projects
-                    </a>
-                  </Link>
-                  <Link route="/about">
-                    <a className="btn btn--grey btn--animated u-margin-bottom-large">
-                      Find Out More About Me
-                    </a>
-                  </Link>
+                <div className="hero-welcome-bio ">
+                  <div className="home-buttons  u-margin-top-med ">
+                    <h1 className="u-margin-bottom-med">
+                      Let's take a look at my work.
+                    </h1>
+                    <Link route="/portfolios">
+                      <a className="btn btn--white btn--animated u-margin-bottom-small">
+                        Check Out Some Projects
+                      </a>
+                    </Link>
+                    <Link route="/about">
+                      <a className="btn btn--grey btn--animated u-margin-bottom-large">
+                        Find Out More About Me
+                      </a>
+                    </Link>
+                  </div>
                 </div>
               </div>
             </div>

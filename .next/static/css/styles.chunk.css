@@ -94,6 +94,11 @@ body {
   letter-spacing: 2px;
   color: white;
   z-index: 20; }
+  @media (max-width: 37.5em) {
+    .self-typed {
+      display: flex;
+      justify-content: center;
+      text-align: center; } }
 
 .u-center-text {
   text-align: center !important; }
@@ -605,6 +610,9 @@ body {
   color: white;
   width: 40rem;
   position: relative; }
+  @media (max-width: 37.5em) {
+    .hero-section {
+      margin: 0 auto; } }
   .hero-section h2 {
     color: white;
     font-weight: bold;
@@ -628,6 +636,9 @@ body {
   font-size: 2.7rem;
   margin-top: 8rem;
   font-weight: 300; }
+  @media (max-width: 37.5em) {
+    .hero-welcome-text > h1 {
+      text-align: center; } }
 
 .hero-welcome-bio {
   margin-top: 20px;
@@ -663,9 +674,12 @@ body {
     height: 100%;
     box-shadow: -17px 13px 13px rgba(0, 0, 0, 0.09); }
 
-.shadow-custom-2 {
-  border: 2px solid #f37d49;
-  box-shadow: -17px 13px 41px rgba(13, 78, 158, 0.3); }
+@media (max-width: 37.5em) {
+  .home-buttons {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center; } }
 
 .base-page {
   padding-top: 15rem;
@@ -737,6 +751,10 @@ body {
     opacity: 0; }
   to {
     opacity: 1; } }
+
+.about__image {
+  display: inline-block;
+  width: 100%; }
 
 .section-book {
   padding: 15rem 0;

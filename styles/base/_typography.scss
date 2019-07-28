@@ -14,4 +14,9 @@ body {
   letter-spacing: 2px;
   color: white;
   z-index: 20;
+  @include respond(phone) {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+  }
 }
