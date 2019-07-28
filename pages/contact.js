@@ -21,7 +21,7 @@ class Contact extends React.Component {
     e.preventDefault();
     let { email, name, message, reasonForSending } = this.state;
     name = `${name} ${reasonForSending}`;
-    console.log(email, name, message);
+    message = `Email: ${email} sent: ${message}`;
     try {
       const formData = { email, name, message };
       await axios.post("/api/contact", formData);

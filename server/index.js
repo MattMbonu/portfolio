@@ -13,9 +13,8 @@ app
     const server = express();
 
     server.use(express.json({ extended: false }));
-    console.log(process.env);
+
     server.post("/api/contact", (req, res) => {
-      console.log(req.body);
       const name = req.body.name;
       const from = req.body.email;
       const message = req.body.message;
@@ -51,7 +50,6 @@ app
               .status(400)
               .send({ message: "error processing request" });
           } else {
-            console.log("email sent!!");
             res.send(data);
           }
         }
