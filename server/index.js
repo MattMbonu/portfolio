@@ -13,37 +13,49 @@ app
     const server = express();
 
     server.use(express.json({ extended: false }));
-
+    console.log(process.env);
     server.post("/api/contact", (req, res) => {
       console.log(req.body);
       const name = req.body.name;
       const from = req.body.email;
       const message = req.body.message;
-      const to = "mcmbonu1@yahoo.com";
-      const smtpTransport = nodemailer.createTransport({
-        host: "smtp.mail.yahoo.com",
+      const to = "mcmbonu1@gmail.com";
+      let transporter = nodemailer.createTransport({
+        host: "smtp.gmail.com",
         port: 465,
-        service: "yahoo",
-        secure: false,
+        secure: true,
         auth: {
-          user: "mcmbonu1@yahoo.com",
-          pass: "dmjjmd123"
+          type: "OAuth2",
+          clientId: process.env.CLIENTID,
+          clientSecret: process.env.CLIENTSECRET
         }
       });
-      const mailOptions = {
-        from: from,
-        to: to,
-        subject: name + " | new message !",
-        text: message
-      };
-      smtpTransport.sendMail(mailOptions, function(error, response) {
-        if (error) {
-          console.log(error);
-        } else {
-          console.log("email sent!");
-          res.redirect("/");
+
+      transporter.sendMail(
+        {
+          from,
+          to,
+          subject: name,
+          text: message,
+          auth: {
+            user: "mcmbonu1@gmail.com",
+            refreshToken: process.env.REFRESHTOKEN,
+            accessToken: process.env.ACCESSTOKEN,
+            expires: 1484314697598
+          }
+        },
+        (err, data) => {
+          if (err) {
+            console.error(error);
+            return res
+              .status(400)
+              .send({ message: "error processing request" });
+          } else {
+            console.log("email sent!!");
+            res.send(data);
+          }
         }
-      });
+      );
     });
 
     server.get("*", (req, res) => {
